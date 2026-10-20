@@ -69,3 +69,24 @@ Lihat `sql/02_EDA.sql` untuk seluruh query dan hasil lengkap per section.
 ### Status akhir hari ini
 Tahap 4 bagian EDA/Validation selesai. Siap lanjut ke `03_cleaning.sql` 
 untuk menentukan dan mengeksekusi penanganan tiap temuan di atas.
+
+## 2026-10-19 (lanjutan)
+
+### Dikerjakan
+- Memulai Tahap 6: Analisis lanjutan dengan Python
+- Membangun RFM Analysis (`notebooks/01_rfm_analysis.ipynb`):
+  - Ekstraksi data transaksi delivered dari PostgreSQL ke pandas
+  - Hitung Recency, Frequency, Monetary per customer_unique_id
+  - Skoring R/F/M dengan metode kuartil (qcut)
+  - Segmentasi pelanggan ke 4 kelompok, juga dengan metode kuartil 
+    supaya konsisten dan proporsional (~23,339 pelanggan per segmen)
+
+### Temuan Utama
+- Lebih dari 75% pelanggan Olist hanya pernah belanja 1 kali — 
+  karakteristik marketplace dengan tingkat repeat purchase rendah
+- Segmentasi akhir: Pelanggan Terbaik, Potensial, Biasa, dan 
+  Berisiko Hilang, masing-masing proporsinya seimbang
+
+### Status akhir hari ini
+RFM Analysis selesai dengan insight terdokumentasi. Cohort retention 
+analysis (bagian lain dari Tahap 6) belum dimulai.
