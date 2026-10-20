@@ -356,7 +356,7 @@ ORDER BY review_creation_date;
 SELECT *
 FROM olist_order_reviews_dataset
 WHERE order_id = '8e17072ec97ce29f0e1f111e598b0c85'
-ORDER BY review_creation_date;
+ORDER BY review_creation_date; 
 
 -- Hitung berapa banyak dari 789 baris duplikat review_id itu yang 
 -- SELURUH kolomnya identik (true duplicate) vs yang cuma review_id-nya 
