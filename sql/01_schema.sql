@@ -1,8 +1,14 @@
+-- 01_shema
+-- Melakukan pembuatan table table yang digunakan dalam
+-- database olist
+
+-- Pembuatan table jika sudah ada
 DROP TABLE IF EXISTS olist_order_reviews_dataset, olist_order_payments_dataset, 
   olist_order_items_dataset, olist_orders_dataset, olist_customers_dataset, 
   olist_sellers_dataset, olist_products_dataset, product_category_name_translation, 
   olist_geolocation_dataset CASCADE;
 
+-- Pembuatan keseluruhan table
 CREATE TABLE olist_geolocation_dataset (
   geolocation_zip_code_prefix varchar,
   geolocation_lat float,

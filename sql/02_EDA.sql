@@ -1,3 +1,8 @@
+-- 02_EDA
+-- Melakukan explanatory atau menjelaskan dan memahami
+-- data yang dimiliki untuk melihat pola data dan potensi
+-- masalah yang dimiliki data
+
 -- 1. Data Counts
 -- Disini data dihitung per tabel dengan menggabungkannya menjadi 1 tabel saja
 -- menggunakan UNION ALL

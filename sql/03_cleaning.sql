@@ -1,4 +1,4 @@
--- 03_CLEANING
+-- 03_cleaning
 -- Query penanganan berdasarkan temuan di 02_EDA.sql
 -- alasan lengkap ada di docs/decision_log.md
 
