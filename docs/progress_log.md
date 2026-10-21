@@ -108,3 +108,29 @@ analysis (bagian lain dari Tahap 6) belum dimulai.
 ### Status akhir hari ini
 Tahap 6 (Analisis Python: RFM + Cohort Retention) selesai sepenuhnya. 
 Siap lanjut ke Tahap 7 (Dashboard).
+
+## 2026-10-20
+
+### Dikerjakan
+- Memulai Tahap 7: Dashboard (Power BI)
+- Berhasil koneksi Power BI Desktop ke PostgreSQL lokal
+- Menyiapkan export CSV dari notebook untuk data RFM dan cohort 
+  retention (`data/processed/rfm_result.csv`, `data/processed/retention_table.csv`)
+- Membangun Halaman 1 (Overview):
+  - Visual "Tren Revenue Bulanan" (line chart) selesai, termasuk 
+    pembuatan kolom DAX `OrderYearMonth` dan filter exclude 3 bulan 
+    anomali data
+  - Visual "Revenue per Wilayah" (bar chart) baru dimulai, belum selesai
+
+### Catatan Teknis
+- Kolom `OrderYearMonth` dibuat via DAX: 
+  `FORMAT('olist_orders_dataset'[order_purchase_timestamp], "YYYY-MM")`
+  — diperlukan karena hierarki tanggal bawaan Power BI (Month saja) 
+  menggabungkan semua tahun jadi satu siklus 12 bulan
+- Filter rentang tanggal pada `order_purchase_timestamp` memakai 
+  Advanced Filtering (is after 12/31/2016, is before 9/1/2018) untuk 
+  exclude bulan dengan data sangat minim
+
+### Status akhir hari ini
+Tahap 7 sedang berjalan. Halaman 1 (Overview) baru 1 dari 4 visual 
+selesai. Halaman 2 dan 3 belum dimulai.

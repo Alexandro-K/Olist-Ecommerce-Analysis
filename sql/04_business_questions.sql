@@ -286,3 +286,27 @@ GROUP BY oi.seller_id
 HAVING COUNT(*) >= 20  -- hanya seller dengan cukup banyak order, supaya persentase bermakna
 ORDER BY jumlah_telat DESC
 LIMIT 10;
+
+-- Business Question 6: Bagaimana rata-rata tingkat kepuasan 
+-- (rating) pelanggan di tiap wilayah (state)?
+-- Insight: wilayah dengan rating terendah didominasi provinsi di luar Sao Paulo/Minas Gerais (pusat ekonomi Brasil) 
+-- seperti RR, MA, AL, SE, PA berada di 5 terbawah, semuanya provinsi yang secara geografis lebih jauh dari pusat logistik utama (SP). 
+-- Sebaliknya, provinsi dengan rating tertinggi (AP, SP, PR, AM, MG) sebagian besar berada di kelompok ekonomi besar/dekat pusat distribusi.
+-- Output(sample):
+-- "customer_state"	"jumlah_review"	"rata2_rating"	"jumlah_rating_rendah"	"persen_rating_rendah"
+-- "RR"	46	3.61	11	23.91
+-- "MA"	738	3.75	162	21.95
+SELECT 
+  c.customer_state,
+  COUNT(r.review_id) AS jumlah_review,
+  ROUND(AVG(r.review_score)::numeric, 2) AS rata2_rating,
+  COUNT(*) FILTER (WHERE r.review_score <= 2) AS jumlah_rating_rendah,
+  ROUND(
+    COUNT(*) FILTER (WHERE r.review_score <= 2)::numeric 
+    / COUNT(*)::numeric * 100, 2
+  ) AS persen_rating_rendah
+FROM olist_orders_dataset o
+JOIN olist_customers_dataset c ON o.customer_id = c.customer_id
+JOIN olist_order_reviews_deduped r ON o.order_id = r.order_id
+GROUP BY c.customer_state
+ORDER BY rata2_rating ASC;
