@@ -90,3 +90,21 @@ untuk menentukan dan mengeksekusi penanganan tiap temuan di atas.
 ### Status akhir hari ini
 RFM Analysis selesai dengan insight terdokumentasi. Cohort retention 
 analysis (bagian lain dari Tahap 6) belum dimulai.
+
+## 2026-10-19 (lanjutan 2)
+
+### Dikerjakan
+- Menyelesaikan Cohort Retention Analysis (`notebooks/02_cohort_retention_analysis.ipynb`):
+  - Kelompokkan pelanggan berdasarkan bulan transaksi pertama (cohort_month)
+  - Hitung cohort_index (jarak bulan sejak transaksi pertama)
+  - Bangun tabel cohort & tabel retensi dalam persentase
+
+### Temuan Utama
+- Retensi bulan ke-1 konsisten sangat rendah di seluruh cohort 
+  (0.18% - 0.72%), terus menurun di bulan-bulan berikutnya
+- Temuan ini selaras dan memperkuat hasil RFM sebelumnya: mayoritas 
+  pelanggan Olist hanya bertransaksi satu kali
+
+### Status akhir hari ini
+Tahap 6 (Analisis Python: RFM + Cohort Retention) selesai sepenuhnya. 
+Siap lanjut ke Tahap 7 (Dashboard).
