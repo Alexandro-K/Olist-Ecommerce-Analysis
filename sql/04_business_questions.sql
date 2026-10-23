@@ -1,3 +1,5 @@
+
+
 -- 04_business_questions
 -- Memahami dan membuktikan pertanyaan business yang dimiliki
 -- melihat apakah pertanyaan tersebut dapat dijawab dan dijelaskan

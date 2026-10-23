@@ -134,3 +134,21 @@ Siap lanjut ke Tahap 7 (Dashboard).
 ### Status akhir hari ini
 Tahap 7 sedang berjalan. Halaman 1 (Overview) baru 1 dari 4 visual 
 selesai. Halaman 2 dan 3 belum dimulai.
+
+## 2026-10-20 (lanjutan)
+
+### Dikerjakan
+- Melanjutkan Tahap 7: Dashboard (Power BI)
+- Menyelesaikan Halaman 2 (Customer Loyalty):
+  - Import CSV hasil RFM dan Cohort Retention dari notebook Python
+  - Visual "Distribusi Segmen Pelanggan (RFM)" (donut chart)
+  - Card "Jumlah Pelanggan Berisiko Hilang"
+  - Matrix heatmap "Tingkat Retensi Antar Cohort"
+  - Scatter plot "Revenue vs Rating per Kategori Produk"
+
+### Kendala & Perbaikan Teknis
+- Import CSV retention_table: kolom tidak terbaca sebagai header 
+  (muncul Column1, Column2, dst) → diperbaiki dengan "Use First Row 
+  as Headers" di Power Query
+- Angka retention salah baca locale (100.0 terbaca jadi 1000) → 
+  diperbaiki dengan re-import dan set locale eksplisit ke
