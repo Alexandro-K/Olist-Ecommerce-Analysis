@@ -38,25 +38,31 @@ Untuk menjalankan ulang project ini, download dataset dari link di atas dan leta
 - Estimasi waktu pengiriman saat ini (24.4 hari) jauh lebih longgar dibanding waktu aktual (12.5 hari)
 
 ## Struktur Project
+\`\`\`
 olist-ecommerce-analysis/
 ├── data/
-│ ├── raw/
-│ └── processed/ 
+│   ├── raw/
+│   └── processed/
 ├── sql/
-│ ├── 01_schema.sql
-│ ├── 02_EDA.sql
-│ ├── 03_cleaning.sql
-│ └── 04_business_questions.sql
+│   ├── 01_schema.sql
+│   ├── 02_EDA.sql
+│   ├── 03_cleaning.sql
+│   └── 04_business_questions.sql
 ├── notebooks/
-│ ├── 01_rfm_analysis.ipynb
-│ └── 02_cohort_retention_analysis.ipynb
+│   ├── 01_rfm_analysis.ipynb
+│   └── 02_cohort_retention_analysis.ipynb
 ├── docs/
-│ ├── erd.png
-│ ├── decision_log.md
-│ └── progress_log.md
+│   ├── erd.png
+│   ├── decision_log.md
+│   └── progress_log.md
 └── dashboard/
-└── olist_ecommerce_dashboard.pbix
-└── olist_ecommerce_dashboard.pdf
+    ├── screenshot/
+    │   ├── screenshot_overview.jpg
+    │   ├── screenshot_customer_loyalty.jpg
+    │   └── screenshot_operational_issues.jpg
+    ├── olist_ecommerce_dashboard.pbix
+    └── olist_ecommerce_dashboard.pdf
+\`\`\`
 
 ## ERD (Entity Relationship Diagram)
 
@@ -76,5 +82,4 @@ Link dashboard (Power BI): -
 ![Operational Issues](/dashboard/screenshot/screenshot_operational_issues.jpg)
 
 ## Author
-
-[www.linkedin.com/in/alexandro-k](Alexandro Kalindra)
+[Alexandro Kalindra](www.linkedin.com/in/alexandro-k)
