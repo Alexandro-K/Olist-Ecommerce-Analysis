@@ -11,7 +11,6 @@ Project ini dibuat sebagai portfolio data analyst, menggunakan dataset transaksi
 Dataset: Brazilian E-Commerce Public Dataset by Olist
 Link: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
-Untuk menjalankan ulang project ini, download dataset dari link di atas dan letakkan file CSV di folder `data/raw/`.
 
 ## Tools yang Digunakan
 
@@ -38,7 +37,7 @@ Untuk menjalankan ulang project ini, download dataset dari link di atas dan leta
 - Estimasi waktu pengiriman saat ini (24.4 hari) jauh lebih longgar dibanding waktu aktual (12.5 hari)
 
 ## Struktur Project
-\`\`\`
+```
 olist-ecommerce-analysis/
 ├── data/
 │   ├── raw/
@@ -62,11 +61,10 @@ olist-ecommerce-analysis/
     │   └── screenshot_operational_issues.jpg
     ├── olist_ecommerce_dashboard.pbix
     └── olist_ecommerce_dashboard.pdf
-\`\`\`
+```
 
 ## ERD (Entity Relationship Diagram)
-
-![ERD](docs/Olist Ecommerce ERD.png)
+![ERD](docs/Olist%20Ecommerce%20ERD.png)
 
 ## Dashboard
 
