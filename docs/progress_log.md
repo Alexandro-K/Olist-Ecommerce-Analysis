@@ -151,4 +151,34 @@ selesai. Halaman 2 dan 3 belum dimulai.
   (muncul Column1, Column2, dst) → diperbaiki dengan "Use First Row 
   as Headers" di Power Query
 - Angka retention salah baca locale (100.0 terbaca jadi 1000) → 
-  diperbaiki dengan re-import dan set locale eksplisit ke
+  diperbaiki dengan re-import dan set locale eksplisit ke Decimal Number
+- Matrix cohort salah susun: cohort_month otomatis pecah jadi hierarki 
+  Year/Quarter/Month/Day → diperbaiki dengan menghapus hierarki, 
+  sisakan cohort_month saja di Rows
+- Scatter plot rating per kategori menunjukkan nilai seragam (4.09 
+  di semua kategori) → diinvestigasi lewat Show as Table, ditemukan 
+  relasi antar tabel (order_items - orders - order_reviews_deduped) 
+  memakai cross filter direction "Single", sehingga filter kategori 
+  produk tidak bisa menjalar ke tabel review. Diperbaiki dengan 
+  mengubah cross filter direction jadi "Both" pada relasi 
+  order_items-orders
+
+### Status akhir hari ini
+Halaman 1 (Overview) dan Halaman 2 (Customer Loyalty) selesai. 
+Halaman 3 (Masalah & Rekomendasi Operasional) belum dimulai.
+
+## 2026-10-23
+
+### Dikerjakan
+- Menyelesaikan Halaman 3 (Operational Issues):
+  - Kolom DAX `Status Pengiriman` (Tepat Waktu/Terlambat/Belum Sampai)
+  - Chart "Rata-rata Rating berdasarkan Status Pengiriman"
+  - Measure `Jumlah Order per Seller`, `Jumlah Telat per Seller`
+  - Chart "Top 10 Seller dengan Keterlambatan Tertinggi"
+  - Measure `Estimasi Baru (1.5x)` dan Multi-row card perbandingan 
+    waktu pengiriman aktual vs estimasi lama vs estimasi baru
+
+### Status akhir hari ini
+Tahap 7 (Dashboard Power BI) selesai sepenuhnya — 3 halaman lengkap: 
+Overview, Customer Loyalty, Operational Issues. Siap lanjut ke Tahap 8 
+(dokumentasi final & publikasi GitHub).
